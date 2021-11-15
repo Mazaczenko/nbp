@@ -32,6 +32,7 @@ class CurrencyController extends Controller
 
             $result = compact('currencies');
             Json::dump($result);
+
             return view('currency', $result);
 
         } catch (\Exception $e) {
