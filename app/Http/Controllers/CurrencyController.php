@@ -28,7 +28,7 @@ class CurrencyController extends Controller
             $currency->save();
         }
             // Get Currencies from DB
-            $currencies = Currency::select('id','name', 'currency_code', 'exchange_rate')->get();
+            $currencies = Currency::select('id','name','currency_code','exchange_rate')->get();
 
             $result = compact('currencies');
             Json::dump($result);
